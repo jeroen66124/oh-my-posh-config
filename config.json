@@ -1,8 +1,10 @@
 {
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 4,
   "blocks": [
     {
       "alignment": "left",
+      "type": "prompt",
       "segments": [
         {
           "background": "transparent",
@@ -46,12 +48,24 @@
           "style": "powerline",
           "template": " {{ .FormattedMs }}s ",
           "type": "executiontime"
+        },
+        {
+          "foreground": "#ffffff",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#ff0000{{ end }}"
+          ],
+          "style": "plain",
+          "template": " \u276f ",
+          "type": "status",
+          "properties": {
+            "always_enabled": true
+          }
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
       "alignment": "right",
+      "type": "prompt",
       "segments": [
         {
           "background": "#1F3A5F",
@@ -62,28 +76,8 @@
           "template": " {{ .CurrentDate | date \"15:04:05\" }} ",
           "type": "time"
         }
-      ],
-      "type": "prompt"
-    },
-    {
-      "alignment": "left",
-      "newline": true,
-      "segments": [
-        {
-          "foreground": "#ffffff",
-          "foreground_templates": [
-            "{{ if gt .Code 0 }}#ff0000{{ end }}"
-          ],
-          "options": {
-            "always_enabled": true
-          },
-          "style": "plain",
-          "template": "\u276f ",
-          "type": "status"
-        }
-      ],
-      "type": "prompt"
+      ]
     }
   ],
-  "version": 4
+  "final_space": true
 }
