@@ -14,6 +14,7 @@
         {
           "background": "#1F3A5F",
           "foreground": "#ffffff",
+          "leading_powerline_symbol": "<transparent,#1F3A5F>\ue0b0</>",
           "powerline_symbol": "\ue0b0",
           "style": "powerline",
           "template": " {{ .UserName }} ",
