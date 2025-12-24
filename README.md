@@ -7,9 +7,7 @@
 6. Setup iTerm2 to use ***MesloLGL Nerd Font Mono*** by going to ***Settings > Profiles > Text***
 7. Add the following snippet to `~/.zshrc`:
 
-`
-if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/jeroen66124/oh-my-posh-config/refs/heads/main/config.json')"
-fi
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-`
+`if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then`<br>
+`eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/jeroen66124/oh-my-posh-config/refs/heads/main/config.json')"`<br>
+`fi`<br>
+`test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"`
